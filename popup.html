@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Browsesaver</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📚 Browsesaver</h1>
+    
+    <section class="card">
+      <div class="label">Site</div>
+      <div id="site" class="value">Detecting...</div>
+    </section>
+    
+    <section class="card">
+      <div class="label">Current Channel</div>
+      <div id="channel" class="value mono">Loading...</div>
+      <div id="stats" class="stats"></div>
+    </section>
+    
+    <section class="buttons">
+      <button id="scanBtn" class="btn">🔍 Scan Now</button>
+      <button id="exportBtn" class="btn primary">💾 Export Channel (NDJSON)</button>
+      <button id="flushBtn" class="btn">⏫ Flush Buffer</button>
+      <button id="clearBtn" class="btn danger">🗑️ Clear Memory</button>
+    </section>
+    
+    <section class="card">
+      <div id="status" class="status"></div>
+    </section>
+    
+    <details class="debug-section">
+      <summary>Debug Log</summary>
+      <button id="exportLogBtn" class="btn small">Export Debug Log</button>
+      <pre id="debugLog">Loading...</pre>
+    </details>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

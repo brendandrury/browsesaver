@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Browsesaver",
+  "version": "0.6.0",
+  "description": "Saves Discord web chat as you scroll, exports as NDJSON.",
+  "permissions": ["downloads", "storage", "tabs"],
+  "host_permissions": [
+    "https://discord.com/*",
+    "https://ptb.discord.com/*",
+    "https://canary.discord.com/*",
+    "https://lmarena.ai/*",
+    "https://arena.ai/*"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "action": {
+    "default_title": "Browsesaver",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://discord.com/*",
+        "https://ptb.discord.com/*",
+        "https://canary.discord.com/*",
+        "https://lmarena.ai/*",
+        "https://arena.ai/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

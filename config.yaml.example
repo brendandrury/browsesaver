@@ -1,0 +1,27 @@
+# Browsesaver Parser Configuration
+
+# Copy this file to config.yaml and edit paths as needed for your system
+
+# Where the browser extension saves spool files
+
+spool_dir: ~/Downloads/Browsesaver/spool
+
+# Where to write full chat logs (with timestamps and authors)
+
+logs_dir: ~/Documents/Browsesaver/logs_full
+
+# Where to write embedding-friendly logs (minimal formatting)
+
+embeddings_dir: ~/Documents/Browsesaver/logs_embeddings
+
+# Delete .ndjson files after processing?
+
+delete_after_processing: true
+
+# How often to check for new files (seconds)
+
+poll_interval: 2.0
+
+# Minimum message length to include (characters)
+
+min_message_length: 2
